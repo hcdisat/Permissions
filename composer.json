@@ -11,10 +11,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
-    "autoload": {
-        "psr-4": {
-            "ITeam\\Permission\\": "src/iTeam/"
-        }
+    "require": {
+        "iteam/permissions": "1.0.1"
     }
 }
