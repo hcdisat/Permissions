@@ -1,5 +1,5 @@
 {
-    "name": "iteam/permissions",
+    "name": "contemporaryva/iteam/permissions",
     "description": "Generic permissions managements with abilities support, multi-roles, multi-permission, group-roles, group-permissions",
     "keywords": ["laravel", "permission", "role"],
     "license": "MIT",
