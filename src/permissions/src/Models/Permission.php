@@ -1,10 +1,11 @@
 <?php namespace ITeam\Permissions\Models;
 
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Permission extends ModelBase
+class Permission extends Model
 {
 
     /**
@@ -30,11 +31,11 @@ class Permission extends ModelBase
      */
     public function people() : MorphToMany
     {
-        return $this->morphedByMany(Person::class, 'permissable');
+        return $this->morphedByMany(config('permitions.user'), 'permissable');
     }
 
     public function networks()
     {
-        return $this->morphedByMany(Network::class, 'permissable');
+        return $this->morphedByMany(config('permitions.group'), 'permissable');
     }
 }

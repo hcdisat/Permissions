@@ -12,6 +12,9 @@
     ],
     "minimum-stability": "dev",
     "require": {},
+    "replace": {
+        "iteam/permissions": "self-version"
+    },
     "autoload": {
         "psr-4": {
             "ITeam\\Permission\\": "src/iTeam/"

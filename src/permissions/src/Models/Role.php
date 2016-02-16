@@ -1,9 +1,10 @@
 <?php namespace ITeam\Permissions\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Role extends ModelBase
+class Role extends Model
 {
 
     /**
@@ -29,7 +30,7 @@ class Role extends ModelBase
      */
     public function people() : MorphToMany
     {
-        return $this->morphedByMany(Person::class, 'roleable');
+        return $this->morphedByMany(config('permitions.user'), 'roleable');
     }
 
     /**
@@ -38,7 +39,7 @@ class Role extends ModelBase
      */
     public function networks() : MorphToMany
     {
-        return $this->morphedByMany(Network::class, 'rolable');
+        return $this->morphedByMany(config('permitions.group'), 'rolable');
     }
 
     /**
