@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ITeam\\Permission\\": "src"
+            "ITeam\\Permission\\": "src/"
         }
     }
 }
