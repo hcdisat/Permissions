@@ -1,0 +1,22 @@
+{
+    "name": "contemporaryva/iteam/permissions",
+    "description": "Generic permissions managements with abilities support, multi-roles, multi-permission, group-roles, group-permissions",
+    "keywords": ["laravel", "permission", "role"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hector Caraballo",
+            "email": "hcdist@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.1",
+        "illuminate/support": "5.2.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "ITeam\\Permission\\": "src"
+        }
+    }
+}

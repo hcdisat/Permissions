@@ -1,0 +1,20 @@
+{
+    "name": "contemporaryva/iteam",
+    "description": "ContemporaryVA - Iteam, Packages collection",
+    "keywords": ["pckages", "iteam"],
+    "license": "MIT",
+    "homepage": "http://www.contemporaryva.com",
+    "authors": [
+        {
+            "name": "Iteam",
+            "email": "iteam@contemporaryva.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ITeam\\Permission\\": "src/iTeam/"
+        }
+    }
+}
