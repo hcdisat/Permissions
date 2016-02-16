@@ -1,22 +1,23 @@
 <?php namespace ITeam\Permissions\Abilities;
 
 
-use Hcdisat\Permissions\Models\Person;
+
+use ITeam\Permissions\Contracts\IRoleable;
 
 class RoleCanSee
 {
 
-    public function roleCanSee(Person $person, $role) : bool
+    public function roleCanSee(IRoleable $person, $role) : bool
     {
         return $person->has($role);
     }
 
-    public function hasPermission(Person $person, $permissions) : bool
+    public function hasPermission(IRoleable $person, $permissions) : bool
     {
         return $person->can($permissions);
     }
 
-    public function canAtleast(Person $person, $permissions)
+    public function canAtleast(IRoleable $person, $permissions)
     {
         $permissions = explode(', ', $permissions);
         return $person->canAtLeast($permissions);

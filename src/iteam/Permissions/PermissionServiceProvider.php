@@ -1,5 +1,6 @@
 <?php namespace ITeam\Permissions;
 
+use ITeam\Permissions\Contracts\IRoleable;
 use ITeam\Permissions\Models\Permission;
 use ITeam\Permissions\Models\Role;
 use Illuminate\Support\ServiceProvider;
@@ -40,5 +41,10 @@ class PermissionServiceProvider extends ServiceProvider
          */
         $this->app->make(Permission::class);
         $this->app->make(Role::class);
+
+        $this->app->bind(
+            IRoleable::class,
+            config('permissions.user')
+        );
     }
 }

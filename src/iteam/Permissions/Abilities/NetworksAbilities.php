@@ -1,7 +1,7 @@
 <?php namespace ITeam\Permissions\Abilities;
 
 
-use ITeam\Permissions\Models\Person;
+use ITeam\Permissions\Contracts\IRoleable;
 
 class NetworksAbilities
 {
@@ -9,11 +9,11 @@ class NetworksAbilities
 
     /**
      * verify if a person is in a network
-     * @param Person $person
+     * @param IRoleable $person
      * @param $networks
      * @return bool
      */
-    public function canNetworkSee(Person $person, $networks) : bool
+    public function canNetworkSee(IRoleable $person, $networks) : bool
     {
         $personNetworks = $person->getAllNetworksForPerson();
 

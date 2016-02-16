@@ -149,7 +149,7 @@ trait RoleTrait
      * @param $permission
      * @return bool
      */
-    public function can($permission, $arguments = []) : bool
+    public function can($permission, $arguments = [])
     {
         $can = false;
 
