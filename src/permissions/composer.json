@@ -10,6 +10,12 @@
         }
     ],
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ContemporaryVA/iTeam"
+        }
+    ],
     "require": {
         "php": ">=7.0.1",
         "illuminate/support": "5.2.x"
