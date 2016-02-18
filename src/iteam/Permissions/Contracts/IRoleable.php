@@ -6,8 +6,6 @@ interface IRoleable
 
     public function getRoles();
 
-    public function has($slug);
-
     public function assignRole($roleId) : bool;
 
     public function addRoles(array $roles) : int;
@@ -17,8 +15,6 @@ interface IRoleable
     public function syncRoles(array $roles) : array;
 
     public function revokeAllRoles() : int;
-
-    public function getPermissions() : array;
 
     public function can($permission, $arguments = []);
 

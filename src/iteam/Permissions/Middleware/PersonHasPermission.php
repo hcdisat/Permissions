@@ -30,7 +30,7 @@ class PersonHasPermission
      */
     public function handle($request, Closure $next, $permissions)
     {
-        if( !$this->auth->user()->can($permissions) )
+        if( !$this->auth->user()->has($permissions) )
         {
             if( $request->ajax() )
             {

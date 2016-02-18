@@ -30,7 +30,7 @@ class PersonHasRole
      */
     public function handle($request, Closure $next, $role)
     {
-        if( !$this->auth->user()->has($role))
+        if( !$this->auth->user()->can($role))
         {
             if( $request->ajax() )
             {

@@ -1,5 +1,6 @@
 <?php namespace ITeam\Permissions;
 
+use ITeam\Permissions\Contracts\IPermissable;
 use ITeam\Permissions\Contracts\IRoleable;
 use ITeam\Permissions\Models\Permission;
 use ITeam\Permissions\Models\Role;
@@ -44,6 +45,11 @@ class PermissionServiceProvider extends ServiceProvider
 
         $this->app->bind(
             IRoleable::class,
+            config('permissions.user')
+        );
+
+        $this->app->bind(
+            IPermissable::class,
             config('permissions.user')
         );
     }
