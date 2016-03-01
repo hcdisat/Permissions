@@ -1,18 +1,17 @@
-<?php namespace ITeam\Permissions\Middleware;
+<?php namespace CVA\Permissions\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class PersonHasRole
+class PersonHasPermission
 {
-
     /**
      * @var Guard
      */
     protected $auth;
 
     /**
-     * PersonHasRole constructor.
+     * PersonHasPermission constructor.
      * @param Guard $auth
      */
     public function __construct(Guard $auth)
@@ -23,23 +22,23 @@ class PersonHasRole
 
     /**
      * Handle an incoming request.
+     *
      * @param  \Illuminate\Http\Request $request
      * @param  \Closure $next
-     * @param $role
+     * @param $permissions
      * @return mixed
      */
-    public function handle($request, Closure $next, $role)
+    public function handle($request, Closure $next, $permissions)
     {
-        if( !$this->auth->user()->has($role))
+        if( !$this->auth->user()->has($permissions) )
         {
             if( $request->ajax() )
             {
-                return response('Unauthorized', 401);
+                return response('Unauthorized.', 403);
             }
 
-            abort(401, 'Unauthorized');
+            abort(403, 'Unauthorized action');
         }
-
         return $next($request);
     }
 }

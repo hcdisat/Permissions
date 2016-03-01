@@ -1,7 +1,7 @@
 <?php
 
-use ITeam\Permissions\Models\Permission;
-use ITeam\Permissions\Models\Role;
+use CVA\Permissions\Models\Permission;
+use CVA\Permissions\Models\Role;
 
 $factory->define(Role::class, function(\Faker\Generator $faker) : array {
     return [

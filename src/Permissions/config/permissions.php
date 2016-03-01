@@ -11,7 +11,18 @@ return [
    |
    */
 
-    'user' => '',
+    'user' => [
+
+        /*
+         * name of the relationship method
+         */
+        'name' => '',
+
+        /*
+         * name of the class Entity (Model)
+         */
+        'class' => ''
+    ],
 
 
     /*
@@ -24,5 +35,16 @@ return [
    |
    */
 
-    'group' => ''
+    'group' => [
+
+        /*
+         *  name of the relationship method
+         */
+        'name' => '',
+
+        /*
+         * name of the class Entity (Model)
+         */
+        'class' => ''
+    ]
 ];

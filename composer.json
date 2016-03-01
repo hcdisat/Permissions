@@ -1,28 +1,22 @@
 {
-    "name": "contemporaryva/iteam",
-    "description": "ContemporaryVA - Iteam, Packages collection",
-    "keywords": ["pckages", "iteam"],
+    "name": "cva/permissions",
+    "description": "Generic permissions managements with abilities support, multi-roles, multi-permission, group-roles, group-permissions",
+    "keywords": ["laravel", "permission", "role"],
     "license": "MIT",
-    "homepage": "http://www.contemporaryva.com",
     "authors": [
         {
-            "name": "Iteam",
-            "email": "iteam@contemporaryva.com"
+            "name": "Hector Caraballo",
+            "email": "hcdist@gmail.com"
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
-    "replace": {
-        "iteam/permissions": "self.version"
+    "require": {
+        "php": ">=7.0.1",
+        "illuminate/support": "5.2.x"
     },
     "autoload": {
         "psr-4": {
-            "ITeam\\": "src/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "v1.0.1"
+            "CVA\\": "src"
         }
     }
 }
