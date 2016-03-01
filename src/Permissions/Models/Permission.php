@@ -1,12 +1,12 @@
-<?php namespace ITeam\Permissions\Models;
+<?php namespace CVA\Permissions\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use ITeam\Permissions\Contracts\IRoleable;
-use ITeam\Permissions\Traits\RelationableTrait;
-use ITeam\Permissions\Traits\RoleableTrait;
+use CVA\Permissions\Contracts\IRoleable;
+use CVA\Permissions\Traits\RelationableTrait;
+use CVA\Permissions\Traits\RoleableTrait;
 
 class Permission extends Model implements IRoleable
 {

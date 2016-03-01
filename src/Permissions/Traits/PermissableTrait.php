@@ -1,4 +1,4 @@
-<?php namespace ITeam\Permissions\Traits;
+<?php namespace CVA\Permissions\Traits;
 
 
 trait PermissableTrait

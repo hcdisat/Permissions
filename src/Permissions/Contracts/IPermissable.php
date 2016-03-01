@@ -1,4 +1,4 @@
-<?php namespace ITeam\Permissions\Contracts;
+<?php namespace CVA\Permissions\Contracts;
 
 
 interface IPermissable

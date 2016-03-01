@@ -1,8 +1,8 @@
-<?php namespace ITeam\Permissions\Abilities;
+<?php namespace CVA\Permissions\Abilities;
 
 
 
-use ITeam\Permissions\Contracts\IRoleable;
+use CVA\Permissions\Contracts\IRoleable;
 
 class RoleCanSee
 {

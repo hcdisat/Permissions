@@ -1,10 +1,10 @@
-<?php namespace ITeam\Permissions\Models;
+<?php namespace CVA\Permissions\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use ITeam\Permissions\Contracts\IPermissable;
-use ITeam\Permissions\Traits\PermissableTrait;
-use ITeam\Permissions\Traits\RelationableTrait;
+use CVA\Permissions\Contracts\IPermissable;
+use CVA\Permissions\Traits\PermissableTrait;
+use CVA\Permissions\Traits\RelationableTrait;
 
 class Role extends Model implements IPermissable
 {

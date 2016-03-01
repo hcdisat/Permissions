@@ -1,9 +1,9 @@
-<?php namespace ITeam\Permissions\Traits;
+<?php namespace CVA\Permissions\Traits;
 
 
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use ITeam\Permissions\Models\Permission;
-use ITeam\Permissions\Models\Role;
+use CVA\Permissions\Models\Permission;
+use CVA\Permissions\Models\Role;
 
 trait MorphedRelationableTrait
 {

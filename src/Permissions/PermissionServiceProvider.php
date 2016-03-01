@@ -1,9 +1,9 @@
-<?php namespace ITeam\Permissions;
+<?php namespace CVA\Permissions;
 
-use ITeam\Permissions\Contracts\IPermissable;
-use ITeam\Permissions\Contracts\IRoleable;
-use ITeam\Permissions\Models\Permission;
-use ITeam\Permissions\Models\Role;
+use CVA\Permissions\Contracts\IPermissable;
+use CVA\Permissions\Contracts\IRoleable;
+use CVA\Permissions\Models\Permission;
+use CVA\Permissions\Models\Role;
 use Illuminate\Support\ServiceProvider;
 
 class PermissionServiceProvider extends ServiceProvider
