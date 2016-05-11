@@ -15,14 +15,14 @@ The first steep is add this line to your composer.json
 "repositories": [
  {
     "type": "vcs",
-    "url": "https://github.com/ContemporaryVA/iTeam"
+    "url": "git@iteam.contemporaryva.com:cva/Permissions.git"
  }
 ]
 ```
 and require the package:
 
 ```
-"contemporaryva/iteam": "dev-master"
+"cva/permissions": "dev-master"
 ```
 
 After that update composer.
@@ -31,7 +31,7 @@ Next step is register the service provider:
 in *config/app.php* in the providers array:
 
 ```
-\ITeam\Permissions\PermissionServiceProvider::class,
+\CVA\Permissions\PermissionServiceProvider::class,
 ```
 We need to specify he user and group entities in a configuration file. this file does not exists just yet
 we need to publish the package configuration. To do so:
