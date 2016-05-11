@@ -1,4 +1,4 @@
-# Ingore common cruft
+# Ignore common cruft
 .DS_STORE
 coverage
 .idea

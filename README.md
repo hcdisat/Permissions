@@ -72,4 +72,6 @@ To satisfy the required method implementations use the next traits:
 
 ## Running the tests
 
-To run the unit tests you must seed your User and Group models and rn php unit
+To run the unit tests you must seed your User and Group models first.
+
+then require phpunit, and you are done.

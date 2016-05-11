@@ -3,7 +3,6 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use CVA\Permissions\Contracts\IRoleable;
 use CVA\Permissions\Traits\RelationableTrait;
 use CVA\Permissions\Traits\RoleableTrait;
