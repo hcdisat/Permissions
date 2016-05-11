@@ -3,7 +3,7 @@
 
 use CVA\Permissions\Contracts\IPermissable;
 
-class PersonHasPermition
+class PersonHasPermission
 {
     public function hasPermissions(IPermissable $person, $permission) : bool
     {

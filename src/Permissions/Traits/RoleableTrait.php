@@ -1,7 +1,5 @@
 <?php namespace CVA\Permissions\Traits;
 
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
-
 trait RoleableTrait
 {
     /**
@@ -23,8 +21,7 @@ trait RoleableTrait
      */
     public function assignRole($roleId) : bool
     {
-        if( !$this->roles->contains($roleId))
-        {
+        if( !$this->roles->contains($roleId) ) {
             $this->roles()->attach($roleId);
             return true;
         }

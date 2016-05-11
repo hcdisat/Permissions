@@ -65,13 +65,7 @@ trait RelationableTrait
 
             return $this->can($permission);
         }
-
-        if( starts_with($method, 'has') && $method !== 'has' )
-        {
-            $role = substr($method, 3);
-            return $this->has($role);
-        }
-
+        
         // handles dynamic calls to has
         if( starts_with($method, 'has') && $method !== 'has' )
         {

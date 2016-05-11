@@ -20,7 +20,7 @@ class Permission extends Model implements IRoleable
 
 
     /**
-     * Permission constructor.
+     * Permissions constructor.
      * @param array $attributes
      */
     public function __construct(array $attributes = [])

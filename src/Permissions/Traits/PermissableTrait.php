@@ -7,7 +7,6 @@ trait PermissableTrait
      * checks if person has one or many permissions
      * @param $permission
      * @return bool
-     * @internal param $slug
      */
     public function has($permission) : bool
     {
@@ -17,11 +16,11 @@ trait PermissableTrait
         // check if the parameter is an array
         if( is_array($permission) )
         {
-            // Count the interection
-            $interectionCount = array_intersect($permissions, $permission);
+            // Count the intersection
+            $intersectionCount = array_intersect($permissions, $permission);
             return
                 // if equals then ew grant access
-                count($permission) == count($interectionCount);
+                count($permission) == count($intersectionCount);
         }
 
         // if not check if the permission is in the list
@@ -56,15 +55,15 @@ trait PermissableTrait
     }
 
     /**
-     * Assign a Permission to a Person
-     * @param int $permissionid
+     * Assign a Permissions to a Person
+     * @param int $permissionId
      * @return bool
      */
-    public function assignPermission($permissionid) : bool
+    public function assignPermission($permissionId) : bool
     {
-        if( !$this->permissions->contains($permissionid))
+        if( !$this->permissions->contains($permissionId))
         {
-            $this->permissions()->attach($permissionid);
+            $this->permissions()->attach($permissionId);
             return true;
         }
         return false;
