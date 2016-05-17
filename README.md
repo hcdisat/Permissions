@@ -53,6 +53,7 @@ $routeMiddleware  array in kernel.php file.
 'person.role' => PersonHasRole::class,
 'person.permission' => PersonHasPermission::class,
 ```
+
 ### Notes:
 We are using convention over configuration so, we are  assuming that the entities that you plan to use
 for your users and groups must have a primary key called ***id***.
