@@ -76,7 +76,7 @@ class PersonTest extends TestCase
 
     public function testsAddVariousRoles()
     {
-        $this->assertTrue(empty($this->person->roles));
+        $this->assertTrue($this->person->roles->isEmpty());
 
         $roles = factory(Role::class, 5)->create();
 
@@ -103,7 +103,7 @@ class PersonTest extends TestCase
 
     public function testSyncRoles()
     {
-        $this->assertTrue(empty($this->person->roles));
+        $this->assertTrue($this->person->roles->isEmpty());
 
         $roles = factory(Role::class, 5)->create();
 
@@ -115,7 +115,7 @@ class PersonTest extends TestCase
 
     public function testRevokeAllRoles()
     {
-        $this->assertTrue(empty($this->person->roles));
+        $this->assertTrue($this->person->roles->isEmpty());
 
         $roles = factory(Role::class, 5)->create();
 
