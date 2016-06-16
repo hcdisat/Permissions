@@ -76,7 +76,7 @@ class PersonNetworkTest extends TestCase
 
         $roles = factory(Role::class, 5)->create();
 
-        $result = $this->network->addRoles($roles->pluck('id')->toArray());
+        $result = $this->network->assignRoles($roles->pluck('id')->toArray());
 
         $this->assertTrue($roles->count() == $result);
 

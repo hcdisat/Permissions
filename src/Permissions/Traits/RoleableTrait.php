@@ -33,7 +33,7 @@ trait RoleableTrait
      * @param array $roles
      * @return int
      */
-    public function addRoles(array $roles) : int
+    public function assignRoles(array $roles) : int
     {
         // if empty return 0
         if( empty($roles) ) return 0;
