@@ -8,13 +8,13 @@ interface IRoleable
 
     public function assignRole($roleId) : bool;
 
-    public function addRoles(array $roles) : int;
+    public function assignRoles(array $roles) : int;
 
     public function revokeRole($roleId = '') : int;
 
-    public function syncRoles(array $roles) : array;
-
     public function revokeAllRoles() : int;
+
+    public function syncRoles(array $roles) : array;
 
     public function can($permission, $arguments = []);
 

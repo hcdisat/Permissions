@@ -1,11 +1,24 @@
 <?php namespace CVA\Permissions\Contracts;
 
 
-interface IPermissable
+interface PermissionManageContract
 {
 
-    public function getPermissions() : array;
+    /*
+     * Roles
+     */
+    public function assignRole($roleId) : bool;
 
+    public function assignRoles(array $roles) : int;
+
+    public function revokeRole($roleId = '') : int;
+
+    public function revokeAllRoles() : int;
+
+
+    /*
+     * Permissions
+     */
     public function assignPermission($roleId) : bool;
 
     public function assignPermissions(array $roles) : int;
@@ -15,8 +28,4 @@ interface IPermissable
     public function revokeAllPermissions() : int;
 
     public function syncPermissions(array $roles) : array;
-
-    public function has($slug);
-
-    public function hasAtLeast(array $permissions) : bool;
 }
