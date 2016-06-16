@@ -15,6 +15,8 @@ interface PermissionManageContract
 
     public function revokeAllRoles() : int;
 
+    public function syncRoles(array $roles) : array;
+
 
     /*
      * Permissions
