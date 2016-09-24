@@ -67,10 +67,11 @@ trait RelationableTrait
         }
         
         // handles dynamic calls to has
-        if( starts_with($method, 'has') && $method !== 'has' )
+        $hasPermission = 'hasPermission';
+        if( starts_with($method, $hasPermission) && $method !== $hasPermission )
         {
-            $role = substr($method, 3);
-            return $this->has($role);
+            $role = substr($method, strlen($hasPermission));
+            return $this->hasPermission($role);
         }
 
         return parent::__call($method, $parameters);

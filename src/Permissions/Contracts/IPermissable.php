@@ -16,7 +16,7 @@ interface IPermissable
 
     public function syncPermissions(array $roles) : array;
 
-    public function has($slug);
+    public function hasPermission($slug);
 
     public function hasAtLeast(array $permissions) : bool;
 }

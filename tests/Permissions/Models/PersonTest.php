@@ -36,8 +36,8 @@ class PersonTest extends TestCase
             ->save(factory(Credential::class)->make());
 
         $this->assertTrue($this->person->username == $this->person->credentials->username);
-        $this->assertFalse(empty($this->person->username), $this->person->username);
-        $this->assertFalse(empty($this->person->password), $this->person->password);
+        $this->assertFalse(empty($this->person->credentials->username), $this->person->username);
+        $this->assertFalse(empty($this->person->credentials->password), $this->person->password);
     }
 
     public function testPersonAssignRole()

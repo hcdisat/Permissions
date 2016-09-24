@@ -8,7 +8,7 @@ trait PermissableTrait
      * @param $permission
      * @return bool
      */
-    public function has($permission) : bool
+    public function hasPermission($permission) : bool
     {
         // get permissions
         $permissions = $this->getPermissions();

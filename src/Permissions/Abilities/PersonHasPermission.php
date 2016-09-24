@@ -7,7 +7,7 @@ class PersonHasPermission
 {
     public function hasPermissions(IPermissable $person, $permission) : bool
     {
-        return $person->has($permission);
+        return $person->hasPermission($permission);
     }
 
 

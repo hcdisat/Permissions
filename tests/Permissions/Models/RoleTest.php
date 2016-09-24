@@ -45,11 +45,11 @@ class RoleTest extends TestCase
 
         $result = $permissions->pluck('slug')->toArray();
 
-        $this->assertTrue($this->role->has($permissions->first()->slug));
+        $this->assertTrue($this->role->hasPermission($permissions->first()->slug));
 
-        $this->assertTrue($this->role->has($result));
+        $this->assertTrue($this->role->hasPermission($result));
 
-        $this->assertFalse($this->role->has(array_merge($result,['foo'])));
+        $this->assertFalse($this->role->hasPermission(array_merge($result,['foo'])));
     }
 
     public function testCanAtLeast()
