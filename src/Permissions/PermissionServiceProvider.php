@@ -17,12 +17,12 @@ class PermissionServiceProvider extends ServiceProvider
     {
         // publishes migrations
         $this->publishes([
-            __DIR__ . '/database/migrations/' => $this->app->databasePath().'/migrations'
+            __DIR__ . '/Database/migrations/' => $this->app->databasePath().'/migrations'
         ], 'migrations');
 
         // model factories
         $this->publishes([
-            __DIR__ . '/database/factories/' => $this->app->databasePath().'/factories'
+            __DIR__ . '/Database/factories/' => $this->app->databasePath().'/factories'
         ], 'factory');
 
         $this->publishes([
