@@ -1,10 +1,13 @@
 <?php namespace CVA\Permissions\Models;
 
+use CVA\Billing\Traits\ByNameCriteria;
+use CVA\Commerce\Services\PlanBuilder\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use CVA\Permissions\Contracts\IPermissable;
 use CVA\Permissions\Traits\PermissableTrait;
 use CVA\Permissions\Traits\RelationableTrait;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 /**
  * CVA\Permissions\Models\Role
@@ -28,8 +31,9 @@ use CVA\Permissions\Traits\RelationableTrait;
  */
 class Role extends Model implements IPermissable
 {
-    use  PermissableTrait, RelationableTrait;
+    use PermissableTrait, RelationableTrait, ByNameCriteria; 
 
+    const Position = 'Position';
 
     /**
      * The attributes that are not fillable via mass assignment.
@@ -55,5 +59,14 @@ class Role extends Model implements IPermissable
     {
         return $this->belongsToMany(Permission::class)
             ->withTimestamps();
+    }
+
+    /**
+     * Has many Roles Polymorphic
+     * @return MorphToMany
+     */
+    public function children() : MorphToMany
+    {
+        return $this->morphToMany(Role::class, 'roleable');
     }
 }

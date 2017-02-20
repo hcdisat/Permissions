@@ -1,6 +1,5 @@
 <?php namespace CVA\Permissions\Database\Seeds;
 
-
 use CVA\Permissions\Models\Role;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +13,17 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
+        $this->createPositionRoles();
+        $this->createAddedFunctionalityRoles();
+    }
+
+    protected function createPositionRoles()
+    {
+        $positionRole = Role::create([
+            'name' => 'Position',
+            'slug' => 'position'
+        ]);
+
         $roles = [
             [
                 'name' => 'Project VA',
@@ -146,8 +156,45 @@ class RolesSeeder extends Seeder
 
         ];
 
+        $children = [];
         foreach ($roles as $role) {
-            Role::create($role);
+            $children[] = Role::create($role)->id;
         }
+
+        $positionRole->children()->attach($children);
+    }
+
+    protected function createAddedFunctionalityRoles()
+    {
+        $cva = Role::create([
+            'name' => 'Added Functionality',
+            'slug' => 'cva_permissions',
+            'description' => 'Main app role permissions'
+        ]);
+
+        $roles = [
+            [
+                'name' => 'Portfolio',
+                'slug' => 'portfolio',
+                'description' => 'Portfolio Manager',
+            ],
+            [
+                'name' => 'Track Load',
+                'slug' => 'track_load',
+                'description' => 'Track on Relationships and Load',
+            ],
+            [
+                'name' => 'Mentoring',
+                'slug' => 'mentoring',
+                'description' => 'Mentoring?',
+            ]
+        ];
+
+        $children = [];
+        foreach ($roles as $role) {
+            $children[] = Role::create($role)->id;
+        }
+
+        $cva->children()->attach($children);
     }
 }

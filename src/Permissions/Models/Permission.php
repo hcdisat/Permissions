@@ -1,11 +1,13 @@
 <?php namespace CVA\Permissions\Models;
 
 
+use CVA\Billing\Traits\ByNameCriteria;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use CVA\Permissions\Contracts\IRoleable;
 use CVA\Permissions\Traits\RelationableTrait;
 use CVA\Permissions\Traits\RoleableTrait;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 /**
  * CVA\Permissions\Models\Permission
@@ -27,7 +29,7 @@ use CVA\Permissions\Traits\RoleableTrait;
  */
 class Permission extends Model implements IRoleable
 {
-    use RelationableTrait, RoleableTrait;
+    use RelationableTrait, RoleableTrait, ByNameCriteria;
 
     /**
      * The attributes that are not fillable via mass assignment. 
@@ -54,5 +56,14 @@ class Permission extends Model implements IRoleable
     {
         return $this->belongsToMany(Role::class)
             ->withTimestamps();
+    }
+
+    /**
+     * Has many Permissions Polymorphic
+     * @return MorphToMany
+     */
+    public function children() : MorphToMany
+    {
+        return $this->morphToMany(Permission::class, 'permissable');
     }
 }
