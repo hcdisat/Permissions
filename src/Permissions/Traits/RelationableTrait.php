@@ -63,7 +63,7 @@ trait RelationableTrait
         {
             $permission = substr($method, 3);
 
-            return $this->can($permission);
+            return $this->hasRole($permission);
         }
         
         // handles dynamic calls to has

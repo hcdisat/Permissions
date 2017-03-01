@@ -18,6 +18,8 @@ interface IRoleable
 
     public function can($permission, $arguments = []);
 
+    public function hasRole($permission);
+
     public function canAtLeast(array $permissions) : bool;
 
 }

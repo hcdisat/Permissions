@@ -86,7 +86,7 @@ trait RoleableTrait
      * @param array $arguments (necesary for the laravel' Gate can method)
      * @return bool
      */
-    public function can($role, $arguments = []) : bool
+    public function hasRole($role, $arguments = []) : bool
     {
         // get roles
         $roles = $this->getRoles();
@@ -105,6 +105,16 @@ trait RoleableTrait
         return in_array($role, $roles);
     }
 
+    /**
+     * checks if the person has a given role
+     * @param mixed $role
+     * @param array $arguments (necesary for the laravel' Gate can method)
+     * @return bool
+     */
+    public function can($role, $arguments = []) : bool
+    {
+        return $this->hasRole($role);
+    }
 
     /**
      * Checks if the role has at least one of the given permissions
