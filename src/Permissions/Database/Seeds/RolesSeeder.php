@@ -1,6 +1,6 @@
-<?php namespace CVA\Permissions\Database\Seeds;
+<?php namespace HcDisat\Permissions\Database\Seeds;
 
-use CVA\Permissions\Models\Role;
+use HcDisat\Permissions\Models\Role;
 use Illuminate\Database\Seeder;
 
 class RolesSeeder extends Seeder

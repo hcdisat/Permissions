@@ -1,16 +1,15 @@
-<?php namespace CVA\Permissions\Models;
+<?php namespace HcDisat\Permissions\Models;
 
-use CVA\Billing\Traits\ByNameCriteria;
-use CVA\Commerce\Services\PlanBuilder\Builder;
+use HcDisat\Commons\Traits\ByNameCriteria;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use CVA\Permissions\Contracts\IPermissable;
-use CVA\Permissions\Traits\PermissableTrait;
-use CVA\Permissions\Traits\RelationableTrait;
+use HcDisat\Permissions\Contracts\IPermissable;
+use HcDisat\Permissions\Traits\PermissableTrait;
+use HcDisat\Permissions\Traits\RelationableTrait;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 /**
- * CVA\Permissions\Models\Role
+ * HcDisat\Permissions\Models\Role
  *
  * @property int $id
  * @property string $name
@@ -19,21 +18,19 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property string $deleted_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\CVA\Permissions\Models\Permission[] $permissions
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereName($value)
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereSlug($value)
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereDescription($value)
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereUpdatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\CVA\Permissions\Models\Role whereDeletedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\HcDisat\Permissions\Models\Permission[] $permissions
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereSlug($value)
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\HcDisat\Permissions\Models\Role whereDeletedAt($value)
  * @mixin \Eloquent
  */
 class Role extends Model implements IPermissable
 {
     use PermissableTrait, RelationableTrait, ByNameCriteria; 
-
-    const Position = 'Position';
 
     /**
      * The attributes that are not fillable via mass assignment.

@@ -1,4 +1,4 @@
-<?php namespace CVA\Permissions\Traits;
+<?php namespace HcDisat\Permissions\Traits;
 
 
 trait PermissableTrait

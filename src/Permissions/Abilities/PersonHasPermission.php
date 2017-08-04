@@ -1,7 +1,7 @@
-<?php namespace CVA\Permissions\Abilities;
+<?php namespace HcDisat\Permissions\Abilities;
 
 
-use CVA\Permissions\Contracts\IPermissable;
+use HcDisat\Permissions\Contracts\IPermissable;
 
 class PersonHasPermission
 {

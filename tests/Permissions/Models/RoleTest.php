@@ -2,6 +2,7 @@
 
 use CVA\Permissions\Models\Permission;
 use CVA\Permissions\Models\Role;
+use Tests\TestCase;
 
 class RoleTest extends TestCase
 {

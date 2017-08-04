@@ -1,9 +1,9 @@
-<?php namespace CVA\Permissions;
+<?php namespace HcDisat\Permissions;
 
-use CVA\Permissions\Contracts\IPermissable;
-use CVA\Permissions\Contracts\IRoleable;
-use CVA\Permissions\Models\Permission;
-use CVA\Permissions\Models\Role;
+use HcDisat\Permissions\Contracts\IPermissable;
+use HcDisat\Permissions\Contracts\IRoleable;
+use HcDisat\Permissions\Models\Permission;
+use HcDisat\Permissions\Models\Role;
 use Illuminate\Support\ServiceProvider;
 
 class PermissionServiceProvider extends ServiceProvider

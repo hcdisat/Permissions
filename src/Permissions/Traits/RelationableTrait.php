@@ -1,4 +1,4 @@
-<?php namespace CVA\Permissions\Traits;
+<?php namespace HcDisat\Permissions\Traits;
 
 
 use Illuminate\Database\Eloquent\Relations\MorphToMany;

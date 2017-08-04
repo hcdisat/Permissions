@@ -1,8 +1,8 @@
-<?php namespace CVA\Permissions\Abilities;
+<?php namespace HcDisat\Permissions\Abilities;
 
 
 
-use CVA\Permissions\Contracts\IRoleable;
+use HcDisat\Permissions\Contracts\IRoleable;
 
 class RoleCanSee
 {

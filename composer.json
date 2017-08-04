@@ -13,14 +13,15 @@
         "php": ">=7.0.0",
         "illuminate/support": ">=5.2",
         "illuminate/database": ">=5.2",
-        "illuminate/http": ">=5.2"
+        "illuminate/http": ">=5.2",
+        "hcdisat/commons":"dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4"
     },
     "autoload": {
         "psr-4": {
-            "CVA\\": "src"
+            "HcDisat\\": "src"
         }
     }
 }

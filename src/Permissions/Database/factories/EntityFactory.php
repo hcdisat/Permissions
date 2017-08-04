@@ -1,7 +1,7 @@
 <?php
 
-use CVA\Permissions\Models\Permission;
-use CVA\Permissions\Models\Role;
+use HcDisat\Permissions\Models\Permission;
+use HcDisat\Permissions\Models\Role;
 
 $factory->define(Role::class, function(\Faker\Generator $faker) : array {
     return [

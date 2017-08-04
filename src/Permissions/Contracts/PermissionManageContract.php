@@ -1,4 +1,4 @@
-<?php namespace CVA\Permissions\Contracts;
+<?php namespace HcDisat\Permissions\Contracts;
 
 
 interface PermissionManageContract

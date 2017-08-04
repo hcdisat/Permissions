@@ -1,4 +1,4 @@
-<?php namespace CVA\Permissions\Middleware;
+<?php namespace HcDisat\Permissions\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
